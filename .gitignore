@@ -1,0 +1,9 @@
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# ... other gitignore entries ...
+.env
