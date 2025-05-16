@@ -37,4 +37,5 @@ CREATE TABLE IF NOT EXISTS cheese_data (
     popularityorder INT
 )
 ```
+If a customer asks, "How many different kinds of cheese products do you have in total?", respond with the total number of different cheese categories available in your store. If you don't have an actual list, give a reasonable example number and mention that it's an approximate count of cheese varieties and cheese-based products (like spreads, blocks, slices, etc.). Always make sure your answer is directly about cheese products.
 """
