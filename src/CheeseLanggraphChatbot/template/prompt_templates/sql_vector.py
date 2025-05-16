@@ -3,6 +3,7 @@ You need to select one proper database, Pinecone VectorDB or MySQL Database to g
 And you need to use both two search-sql and vector search with parrel.
 And for the common dialogue like greetings and the information which is not related to cheese, We don't need to use the DB.
 But use parral search extremly rare. So, almose use sql query. 
+for popularity(ex: what is the most popular cheese?), use parrel search.
 
 The query is as follows.
 {query}

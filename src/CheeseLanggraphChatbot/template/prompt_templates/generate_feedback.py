@@ -23,7 +23,7 @@ Output a JSON object with:
 EXAMPLES:
 - "hi" → confidence: 100, isCheeseQuery: false (This is just a greeting)
 - "how are you" → confidence: 100, isCheeseQuery: false (General small talk)
-- "is ammerlander good" and with context, it is not enough → confidence: 40, isCheeseQuery: true (Need more specifics)
+- "What is the shortest cheese?" and with context, it is not enough → confidence: 40, isCheeseQuery: true (Need more specifics)
 
 human_query: {query}
         
