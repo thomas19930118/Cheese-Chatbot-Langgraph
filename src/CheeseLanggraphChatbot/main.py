@@ -87,29 +87,29 @@ def load_langgraph_cheese_app():
         user_message = st.chat_input("Enter your message:")
 
     if user_message:
-        # try:
+        try:
             # Configure LLM
-        obj_model_config = OpenAiModel(user_controls_input=user_input)
-        model = obj_model_config.get_model()
-        
-        if not model:
-            st.error("Error: OpenAI model could not be initialized.")
-            return
+            obj_model_config = OpenAiModel(user_controls_input=user_input)
+            model = obj_model_config.get_model()
+            
+            if not model:
+                st.error("Error: OpenAI model could not be initialized.")
+                return
 
         # Initialize and set up the graph based on use case
 
         ### Graph Builder
-        graph_builder=GraphBuilder(model)
+            graph_builder=GraphBuilder(model)
 
-        # try:
-        graph = graph_builder.setup_graph()
-        print(user_input['show_reasoning'])
-        DisplayResultStreamlit(graph,user_message, user_input['show_reasoning']).display_result_on_ui()
-            # except Exception as e:
-            #     st.error(f"Error: Graph setup failed - {e}")
-            #     print(e)
-            #     return
+            try:
+                graph = graph_builder.setup_graph()
+                print(user_input['show_reasoning'])
+                DisplayResultStreamlit(graph,user_message, user_input['show_reasoning']).display_result_on_ui()
+            except Exception as e:
+                st.error(f"Error: Graph setup failed - {e}")
+                print(e)
+                return
             
 
-        # except Exception as e:
-        #         raise ValueError(f"Error Occurred with Exception : {e}")
+        except Exception as e:
+                raise ValueError(f"Error Occurred with Exception : {e}")
